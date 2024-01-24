@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Card, Col, Container, ListGroup, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux';
 import {useParams} from 'react-router-dom'
@@ -11,7 +11,7 @@ function Details() {
 
 
 
-    const currentRes = restaurants.find((res) => res._id == id);
+    const currentRes = restaurants.find((res) => res._id === id);
 
     console.log(currentRes);
 

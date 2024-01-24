@@ -1,21 +1,15 @@
-import React, { useState } from 'react'
-import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
+import React from 'react'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
 function Home() {
 
-    const [count, setCount] = useState(10);
 
     const restaurants = useSelector((state) => state.data.restaurants);
 
     
-    const updateCount = ()=>{
-        setCount(40);
-
-    }
-
 
     //stateless components ....> FN components
     //stateful components -----> Class based comp
@@ -25,7 +19,7 @@ function Home() {
 
     return (
         <Container>
-            <button onClick={updateCount}>Update Count</button>
+            {/* <button onClick={updateCount}>Update Count</button> */}
             <Row>
 
                 {restaurants && restaurants.map((res, index) =>(
